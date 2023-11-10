@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>APS</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        background: url('https://res.cloudinary.com/dejib03kh/image/upload/v1697694318/annie-spratt-0ZPSX_mQ3xI-unsplash_z7pjhe.jpg')
+          no-repeat center center fixed;
+        background-size: cover;
+        margin: 0 10em;
+      }
+      .c-main {
+        background: #291d26;
+      }
+      .c-main .c-top {
+        border: 1.2em solid #a52a2a;
+        border-bottom: none;
+        display: flex;
+        padding-right: 3em;
+        gap: 2em;
+        align-items: center;
+        justify-content: space-around;
+      }
+      .c-main .cleft {
+        width: 50%;
+      }
+
+      .c-main .c-right {
+        width: 50%;
+      }
+      .c-full-name {
+        text-transform: uppercase;
+        font-size: 0.7em;
+      }
+      .c-name {
+        color: #a52a2a;
+        font-size: larger;
+      }
+      .c-surname {
+        color: #a52a2a;
+      }
+      .c-full-name p {
+        text-transform: capitalize;
+        color: #575757;
+      }
+      .c-profile-image img {
+        border-radius: 50%;
+        height: 8em;
+        width: 8em;
+        margin: 1em;
+      }
+      .c-bottom {
+        border: 1.2em solid #fff;
+        border-top: 0;
+        display: flex;
+        gap: 1em;
+        color: #dc5858;
+      }
+      .c-bottom p {
+        text-align: justify;
+        font-size: small;
+      }
+      .c-bottom .c-left {
+        width: 40%;
+        background: #f2c8c8;
+        padding: 1em;
+        padding-top: 0;
+      }
+      .c-line {
+        height: 2.5px;
+        background: #dc5858;
+        width: 100%;
+        margin: auto;
+      }
+      .c-bottom .c-right {
+        width: 60%;
+        padding: 1em;
+        padding-top: 1em;
+      }
+      .c-contact,
+      .c-about-me,
+      .c-skills {
+        margin: 1em 0;
+      }
+      .c-about-me p {
+        margin: 0.5em 0;
+        font-size: small;
+        text-align: justify;
+      }
+      ul,
+      li {
+        list-style: none;
+        font-size: small;
+        margin: 0.2em 0;
+        padding: 0.2em 0;
+      }
+
+      .c-body-bottom,
+      .c-second-bottom,
+      .c-third-bottom {
+        display: flex;
+        margin-top: 0.7em;
+        margin-bottom: 1.2em;
+        gap: 10px;
+      }
+      .c-dates {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .c-date:nth-child(1) {
+        margin-top: 0.3em;
+        height: 26%;
+      }
+      .c-date:nth-child(2) {
+        height: 40%;
+      }
+      .c-time-lines {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .c-time-line {
+        margin: auto;
+        width: 2px;
+        background: #dc5858;
+      }
+      .c-time-lines .c-time-line:nth-child(2) {
+        height: 40%;
+        margin: 0 auto;
+      }
+      .c-time-lines .c-time-line:nth-child(4) {
+        height: 38%;
+        margin: 0 auto;
+      }
+      .c-time-lines .c-time-line:nth-child(6) {
+        height: 25%;
+        margin: 0 auto;
+      }
+      .c-time-line-circle {
+        width: 0.5em;
+        height: 0.5em;
+        border: 2px solid #dc5858;
+        border-radius: 50%;
+      }
+      .c-second-bottom .c-time-lines .c-time-line:nth-child(2) {
+        height: 40%;
+      }
+      .c-second-bottom .c-time-lines .c-time-line:nth-child(4) {
+        height: 50%;
+      }
+      .c-second-bottom .c-date:nth-child(1) {
+        height: 29%;
+      }
+      .c-second-bottom .c-date:nth-child(2) {
+        height: 42%;
+      }
+      .c-third-bottom .c-date {
+        height: 25%;
+      }
+      .c-third-bottom .c-time-line:nth-child(2) {
+        height: 22%;
+      }
+      .c-third-bottom .c-time-line:nth-child(4) {
+        height: 18%;
+      }
+      .c-third-bottom .c-time-line:nth-child(6) {
+        height: 19%;
+      }
+      .c-time-line-last {
+        height: 65px;
+        width: 2px;
+        background: #dc5858;
+        margin: auto;
+      }
+      .c-body-footer {
+        display: flex;
+        gap: 5em;
+      }
+      .c-footer {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      @media screen and (max-width: 768px) {
+        body {
+          margin: 0;
+        }
+        .c-main {
+          margin: 0;
+          background: #fff;
+        }
+        .c-main .c-top {
+          flex-direction: column;
+          padding-right: 0em;
+          gap: 0em;
+        }
+        .c-main .cleft {
+          width: auto;
+        }
+        .c-main .c-right {
+          width: auto;
+        }
+        .c-bottom .c-left {
+          width: auto;
+        }
+        .c-bottom .c-right {
+          width: auto;
+        }
+        .c-bottom {
+          flex-direction: column;
+        }
+        .c-body-footer {
+          display: flex;
+          gap: 0.7em;
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="c-main">
+      <div class="c-top">
+        <div class="c-left">
+          <div class="c-profile-image">
+            <figure>
+              <img
+                src="https://res.cloudinary.com/dejib03kh/image/upload/v1697695883/WhatsApp_Image_2023-10-19_at_11.40.04_AM_tmblxk.jpg"
+                alt="Anand Prakash Sharma"
+              />
+            </figure>
+          </div>
+        </div>
+        <div class="c-right">
+          <div class="c-full-name">
+            <h1>
+              <span class="c-name">Anand</span> <br /><span class="c-surname"
+                >Prakash Sharma</span
+              >
+            </h1>
+
+            <p>Web Developer and Teacher</p>
+          </div>
+        </div>
+      </div>
+      <div class="c-bottom">
+        <div class="c-left">
+          <div class="c-contact">
+            <h2>Contacts</h2>
+            <div class="c-line"></div>
+            <ul class="c-contact-details">
+              <li><i class="fa fa-phone"></i> +91 82*****596</li>
+              <li>
+                <i class="fa fa-envelope"></i>
+                mymailforalllogs@gmail.com
+              </li>
+              <li>
+                <i class="fa fa-address-book"></i> Bhatpara B, Upper Line <br />
+                Kalchini, Alipurduar <br />
+                West Bengal - 735217
+              </li>
+            </ul>
+          </div>
+          <div class="c-about-me">
+            <h2>About Me</h2>
+            <div class="c-line"></div>
+            <p>
+              I am a proficient computer enthusiast with a strong command of
+              both technology and languages, including English. With a versatile
+              skill set, I can develop both static and dynamic web pages, and
+              I'm well-versed in MERN stack for backend development. Beyond my
+              technical abilities, I bring valuable teaching experience to the
+              table. I have spent many years as an English and fundamental maths
+              teacher, as well as a computer instructor. My passion for
+              education and technology drives me to continuously expand my
+              knowledge and skills in both fields.
+            </p>
+          </div>
+          <div class="c-skills">
+            <h2>Skills</h2>
+            <div class="c-line"></div>
+            <ul>
+              <ul>
+                <h3>Web Page Development</h3>
+                <li>HTML, CSS, JavaScript (es6+)</li>
+                <li>JQuery</li>
+                <li>SASS</li>
+                <li>ReactJS, NextJS</li>
+                <li>NodeJS with Express</li>
+              </ul>
+              <ul>
+                <h3>Programming</h3>
+                <li>C, Java Core</li>
+                <li>Financial Accounting with Tally ERP</li>
+              </ul>
+              <ul>
+                <h3>Financial Accounting</h3>
+                <li>Tally ERP</li>
+              </ul>
+              <ul>
+                <h3>Writing Poems</h3>
+                <li>English, Hindi, Nepali</li>
+              </ul>
+              <!-- Add more skills as needed -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- ##################### -->
+        <div class="c-right">
+          <div class="c-body-top">
+            <h2>Work Experience</h2>
+          </div>
+          <div class="c-body-bottom">
+            <div class="c-dates">
+              <div class="c-date">
+                <p>2011</p>
+                <p>2013</p>
+              </div>
+              <div class="c-date">
+                <p>2013</p>
+                <p>2014</p>
+              </div>
+              <div class="c-date">
+                <p>2021</p>
+                <p>2023</p>
+              </div>
+            </div>
+            <div class="c-time-lines">
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+            </div>
+            <div>
+              <div>
+                <h3>Brave Heart Ideal English School</h3>
+                <p>Taught English, Mathematics, and Computer</p>
+              </div>
+              <div>
+                <h3>Elite Group of Education</h3>
+                <p>
+                  Started coaching centre in partnership. I taught English
+                  Grammar and Communicative English, Mathematics and Computer.
+                </p>
+              </div>
+              <div>
+                <h3>Jhinlab Public School (Computer, English, Mathematics)</h3>
+                <p>Here I taught English, Mathematics, and Computer.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ########################## -->
+          <div class="c-body-top">
+            <h2>Education</h2>
+          </div>
+          <div class="c-second-bottom">
+            <div class="c-dates">
+              <div class="c-date">
+                <p>2005</p>
+              </div>
+              <div class="c-date">
+                <p>2007</p>
+              </div>
+              <div class="c-date">
+                <p>2011</p>
+              </div>
+            </div>
+            <div class="c-time-lines">
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+              <div class="c-time-line-circle"></div>
+              <div class="c-time-line"></div>
+            </div>
+            <div>
+              <div>
+                <h3>Matriculation</h3>
+                <p>
+                  Hindi, English, Maths, L. Science, Ph. Science, History,
+                  Geography
+                </p>
+              </div>
+              <div>
+                <h3>Higher Secondary: Commerce</h3>
+                <p>
+                  Hindi, English, Busines Organisation, Economics, Accountancy
+                </p>
+              </div>
+              <div>
+                <h3>Graduation: Bachelor of Arts</h3>
+                <p>English, History, Pol. Science</p>
+              </div>
+            </div>
+          </div>
+          <!-- ########################## -->
+          <div class="c-body-top">
+            <h2>Languages Known</h2>
+          </div>
+          <div class="c-third-bottom">
+            <div>
+              <div>
+                <h3>Nepali (Mother Tongue)</h3>
+                <p>
+                  Read &nbsp;&nbsp;&nbsp; Write &nbsp;&nbsp;&nbsp; Speak - Very
+                  Good
+                </p>
+              </div>
+              <div>
+                <h3>Bangla</h3>
+                <p>
+                  Read
+                  <span style="text-decoration: line-through">Write</span> Speak
+                  - Good
+                </p>
+              </div>
+              <div>
+                <h3>Hindi</h3>
+                <p>
+                  Read &nbsp;&nbsp;&nbsp; Write &nbsp;&nbsp;&nbsp; Speak - Very
+                  Good
+                </p>
+              </div>
+              <div>
+                <h3>English</h3>
+                <p>
+                  Read &nbsp;&nbsp;&nbsp; Write &nbsp;&nbsp;&nbsp; Speak - Very
+                  Good
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- ####################### -->
+          <div class="c-body-footer">
+            <div class="c-footer-left">
+              <h2>Hobbies</h2>
+              <ul>
+                <li>Reading Books</li>
+                <li>Playing Guitar</li>
+                <li>Singing</li>
+              </ul>
+            </div>
+            <div class="c-footer-right">
+              <h2>Ambitions</h2>
+              <p><strong>To become a/an -</strong></p>
+              <ul>
+                <li>Author</li>
+                <li>Social Activist</li>
+                <li>Entrepreneur</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- ######################### -->
+        </div>
+      </div>
+      <footer class="c-footer">
+        &copy;2023 APS
+        <p>inspired by postermywall.com</p>
+      </footer>
+    </main>
+  </body>
+</html>

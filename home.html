@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Your CV</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins:400,700"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Common styles */
+      body {
+        font-family: 'Poppins', Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: url('https://res.cloudinary.com/dejib03kh/image/upload/v1697694318/annie-spratt-0ZPSX_mQ3xI-unsplash_z7pjhe.jpg')
+          no-repeat center center fixed;
+        background-size: cover;
+      }
+
+      /* Desktop styles */
+      .cv-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.7);
+        animation: fadeIn 1s;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      img {
+        border-radius: 7px;
+      }
+      figcaption {
+        font-size: 0.6rem;
+      }
+      .header {
+        text-align: center;
+      }
+
+      .header h1 {
+        font-size: 36px;
+        color: #4285f4;
+      }
+
+      /* Styling for animated cards */
+      .card {
+        border: none;
+        border-radius: 10px;
+        padding: 20px;
+        padding-top: 0.5em !important;
+        padding-bottom: 0.5em !important;
+        margin: 20px 0;
+        margin-top: 0;
+        backdrop-filter: blur(5px);
+        background-color: rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+        width: 500px;
+      }
+
+      .card p {
+        margin-top: 0;
+      }
+
+      .card:hover {
+        backdrop-filter: blur(5px);
+        background-color: rgba(0, 0, 0, 0.039);
+        transform: scale(1.03);
+      }
+
+      .section {
+        margin-top: 20px;
+      }
+
+      .section h2,
+      h1 {
+        color: #4285f4;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .section p {
+        font-size: 18px;
+      }
+
+      .section ul {
+        list-style: none;
+        padding: 0;
+        margin-top: 0;
+      }
+
+      .section li::before {
+        content: '•';
+        color: #4285f4;
+        margin-right: 10px;
+      }
+
+      .bangla-write {
+        text-decoration: line-through;
+      }
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      /* Mobile styles using media query */
+      @media screen and (max-width: 600px) {
+        .cv-container {
+          padding: 10px;
+        }
+
+        .header h1 {
+          font-size: 24px;
+        }
+
+        .section h2 {
+          font-size: 24px;
+        }
+
+        .section p {
+          font-size: 16px;
+        }
+      }
+
+      /* Animation */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cv-container">
+      <div class="header">
+        <h1 style="text-decoration: underline">Curriculum Vitae</h1>
+        <figure>
+          <img
+            src="https://res.cloudinary.com/dejib03kh/image/upload/v1697695883/WhatsApp_Image_2023-10-19_at_11.40.04_AM_tmblxk.jpg"
+            alt="Anand Prakash Sharma"
+            height="150"
+          />
+          <figcaption>Image of Anand Prakash Sharma</figcaption>
+        </figure>
+      </div>
+      <div class="section">
+        <h2 style="font-size: 2rem">Anand Prakash Sharma</h2>
+        <div class="card">
+          <p>Email: mymailforalllogs@gmail.com</p>
+          <p>Phone: <i class="fa fa-phone"></i> +91 82*****596</p>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Address</h2>
+        <div class="card">
+          <p>Bhatpara B T.E. Top Line</p>
+          <p>Kalchini– 735217, Alipurduar</p>
+          <p>West Bengal</p>
+          <br />
+        </div>
+      </div>
+      <div class="section">
+        <h2>Family Background</h2>
+        <div class="card">
+          <p>Father: Mr. Maniram Sharma</p>
+          <p>Mother: Mrs. Shilamerry Sharma</p>
+          <p>Faith: Christian</p>
+          <p>Nationality: Indian</p>
+          <p>Marital Status: Married</p>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Work Experience</h2>
+        <div class="card">
+          <ul>
+            <ul>
+              <h3>Elite Group of Education for 2yr</h3>
+              <li>Computer Faculty</li>
+            </ul>
+
+            <ul>
+              <h3>Teaching in Private School for several years</h3>
+              <li>
+                Brave Heart Ideal English School(Computer, English, Mathematics)
+              </li>
+              <li>Jhinlab Public School (Computer, English, Mathematics)</li>
+            </ul>
+
+            <h3>Brilliance Coaching Centre</h3>
+            <ul>
+              <li>Maths, Reasoning and English - 1 year</li>
+            </ul>
+          </ul>
+        </div>
+        <!-- Add more work experience cards as needed -->
+      </div>
+      <div class="section">
+        <h2>Education</h2>
+        <div class="card">
+          <ul>
+            <li><strong>Matriculation</strong> - 2005</li>
+            <li><strong>Higher Secondary</strong> - Commerce - 2007</li>
+            <li><strong>Graduation</strong> - Bachelor or Arts - 2011</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Academics</h2>
+        <div class="card">
+          <ul>
+            <li>Computer Application</li>
+            <li>Basic Hardware and Networking</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Skills</h2>
+        <div class="card">
+          <ul>
+            <ul>
+              <h3>Web Page Development</h3>
+              <li>HTML, CSS, JavaScript (es6+)</li>
+              <li>JQuery</li>
+              <li>SASS</li>
+              <li>ReactJS, NextJS</li>
+              <li>NodeJS with Express</li>
+            </ul>
+            <ul>
+              <h3>Programming</h3>
+              <li>C, Java Core</li>
+              <li>Financial Accounting with Tally ERP</li>
+            </ul>
+            <ul>
+              <h3>Financial Accounting</h3>
+              <li>Tally ERP</li>
+            </ul>
+            <ul>
+              <h3>Writing Poems</h3>
+              <li>English, Hindi, Nepali</li>
+            </ul>
+            <!-- Add more skills as needed -->
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Languages Known</h2>
+        <div class="card">
+          <ul>
+            <li>
+              Nepali <strong>(Mother Tongue)</strong> - Read - Write - Speak -
+              Very Good
+            </li>
+            <li>
+              Bangla - Read - <span class="bangla-write">Write</span> - Speak -
+              Good
+            </li>
+            <li>Hindi - Read - Write - Speak - Very Good</li>
+            <li>English - Read - Write - Speak - Very Good</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Hobby</h2>
+        <div class="card">
+          <ul>
+            <li>Reading</li>
+            <li>Playing Guitar</li>
+            <li>Singing</li>
+            <li>Watching Si-Fi, Fantacy Movies</li>
+          </ul>
+        </div>
+      </div>
+      <div class="section">
+        <h2>Ambition</h2>
+        <div class="card">
+          <h3>To become a/an</h3>
+          <ul>
+            <li>Author</li>
+            <li>Social Activist</li>
+            <li>Full Stack Web Developer</li>
+            <li>Entrepreneur</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer">
+        <p>&copy; 2023 Anand Prakash Sharma</p>
+      </div>
+    </div>
+  </body>
+</html>
